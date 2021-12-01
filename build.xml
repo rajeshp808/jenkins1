@@ -9,9 +9,9 @@
         <pathelement location="bin"/>
     </path>
     <target name="init">
-        <mkdir dir="build"/>
-        <copy includeemptydirs="false" todir="bin">
-            <fileset dir="jenkins1">
+        <mkdir dir="war"/>
+        <copy includeemptydirs="false" todir="war">
+            <fileset dir="${basedir}">
                 <include name="**/*.html"/>
             </fileset>
         </copy>
@@ -29,5 +29,6 @@
 		</typedef>
 	</target>
 	<target name="buildWar" depends="init">
+		<jar jarfile="build/${warFile}" basedir="${basedir}/war"/>
    </target>
 </project>
