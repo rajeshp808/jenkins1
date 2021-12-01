@@ -18,6 +18,7 @@
     </target>
     <target name="clean">
         <delete dir="build"/>
+		<delete dir="war"/>
     </target>
 	<target name="gitLoad">
 		<typedef resource="org/tigris/subversion/svnant/svnantlib.xml">
@@ -28,7 +29,7 @@
 			</classpath>
 		</typedef>
 	</target>
-	<target name="buildWar" depends="init">
+	<target name="buildWar" depends="clean,init">
 		<jar jarfile="build/${warFile}" basedir="${basedir}/war"/>
    </target>
 </project>
