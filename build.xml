@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="build" name="Jenkins">
+<property file="${basedir}/build.properties"/>
+    <property environment="env"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <!-- Property defining the war Filename -->
+	<property name="warFile" value="${appName}.war"/>
+    <path id="Jenkins.classpath">
+        <pathelement location="bin"/>
+    </path>
+    <target name="init">
+        <mkdir dir="build"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="jenkins1">
+                <include name="**/*.html"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+	<target name="gitLoad">
+		<typedef resource="org/tigris/subversion/svnant/svnantlib.xml">
+			<classpath>
+			<fileset dir="${property.svnlib}">
+				<include name="**/*.jar"/>
+			</fileset>
+			</classpath>
+		</typedef>
+	</target>
+	<target name="buildWar" depends="init">
+   </target>
+</project>
