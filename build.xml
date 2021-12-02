@@ -17,6 +17,7 @@
         </copy>
     </target>
     <target name="clean">
+    	<echo>Deleting directory build and war</echo>
         <delete dir="build"/>
 		<delete dir="war"/>
     </target>
