@@ -38,7 +38,7 @@
 			</javac>
 	</target>
 	<target name="compress" depends="compile" description="Compression target">
-		<jar jarfile="WebContent/WEB-INF/lib/Start.jar" basedir="${classdir}" />
+		<jar jarfile="WebContent/WEB-INF/lib/jenkins.jar" basedir="${classdir}" />
 	</target>
 	<target name="help" description="Help">
 	    <echo>Targets</echo>
