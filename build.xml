@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project basedir="." default="build" name="Jenkins">
+<project basedir="." default="help" name="Jenkins">
 <property file="${basedir}/build.properties"/>
     <property environment="env"/>
     <property name="debuglevel" value="source,lines,vars"/>
@@ -20,16 +20,15 @@
         <delete dir="build"/>
 		<delete dir="war"/>
     </target>
-	<target name="gitLoad">
-		<typedef resource="org/tigris/subversion/svnant/svnantlib.xml">
-			<classpath>
-			<fileset dir="${property.svnlib}">
-				<include name="**/*.jar"/>
-			</fileset>
-			</classpath>
-		</typedef>
-	</target>
+	
 	<target name="buildWar" depends="clean,init">
 		<jar jarfile="build/${warFile}" basedir="${basedir}/war"/>
    </target>
+	
+	<target name="help" description="Help">
+	    <echo>Targets</echo>
+	    <echo>=======</echo>
+	    <echo> Please specify target name as buildWar for building the war file.</echo>
+	    
+	  </target>
 </project>
