@@ -5,27 +5,32 @@
     <property name="debuglevel" value="source,lines,vars"/>
     <!-- Property defining the war Filename -->
 	<property name="warFile" value="${appName}.war"/>
+	<property name="src" value="${basedir}/src"/>
+	<property name="buildDir" value="${basedir}/build"/>
+	<property name="jenkinDir" value="${basedir}/jenkins1"/>
+	<property name="classdir" value="${basedir}/WebContent/WEB-INF/classes"/>
     <path id="Jenkins.classpath">
         <pathelement location="bin"/>
     </path>
     <target name="init">
-        <mkdir dir="war"/>
-        <copy includeemptydirs="false" todir="war">
-            <fileset dir="${basedir}">
-                <include name="**/*.html"/>
-            </fileset>
-        </copy>
+        <mkdir dir="${buildDir}"/>        
     </target>
     <target name="clean">
     	<echo>Deleting directory build and war</echo>
-        <delete dir="build"/>
-		<delete dir="war"/>
+        <delete dir="${buildDir}"/>
     </target>
 	
-	<target name="buildWar" depends="clean,init">
-		<jar jarfile="build/${warFile}" basedir="${basedir}/war"/>
-   </target>
-	
+	<target name="buildWar" depends="clean,init,compile,compress">
+			<jar jarfile="build/${warFile}" basedir="${basedir}/WebContent"/>
+		</target>
+	<target name="compile" depends="init">
+			<javac srcdir="${src}" debug="true" destdir="${classdir}" nowarn="true" includes="**/*.java" includeantruntime="false" classpathref="Jenkins.classpath">
+			<compilerarg value="-Xlint:-unchecked"/>
+			</javac>
+	</target>
+	<target name="compress" depends="compile" description="Compression target">
+		<jar jarfile="WebContent/WEB-INF/lib/Start.jar" basedir="${classdir}" />
+	</target>
 	<target name="help" description="Help">
 	    <echo>Targets</echo>
 	    <echo>=======</echo>
