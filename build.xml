@@ -9,15 +9,24 @@
 	<property name="buildDir" value="${basedir}/build"/>
 	<property name="jenkinDir" value="${basedir}/jenkins1"/>
 	<property name="classdir" value="${basedir}/WebContent/WEB-INF/classes"/>
+	<property name="libDir" value="${basedir}/WebContent/WEB-INF/lib"/>
     <path id="Jenkins.classpath">
         <pathelement location="bin"/>
     </path>
     <target name="init">
-        <mkdir dir="${buildDir}"/>        
+        <mkdir dir="${buildDir}"/>  
+    	<mkdir dir="${classdir}"/>
     </target>
     <target name="clean">
     	<echo>Deleting directory build and war</echo>
         <delete dir="${buildDir}"/>
+    	<delete dir="${classdir}"/>
+    	<delete>
+    	    <fileset dir="${libDir}">
+    	       <include name="*.jar"/>
+    	    </fileset>
+    	</delete>
+    	
     </target>
 	
 	<target name="buildWar" depends="clean,init,compile,compress">
