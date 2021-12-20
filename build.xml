@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project basedir="." default="help" name="Jenkins">
+<project basedir="." default="help" name="Jenkins1" xmlns:sonar="antlib:org.sonar.ant">
 <property file="${basedir}/build.properties"/>
     <property environment="env"/>
     <property name="debuglevel" value="source,lines,vars"/>
@@ -13,6 +13,25 @@
     <path id="Jenkins.classpath">
         <pathelement location="bin"/>
     </path>
+	<!-- Define the SonarQube global properties -->
+	<property name="sonar.host.url" value="http://localhost:9068" />
+	<!-- Define the SonarQube project properties -->
+	<property name="sonar.projectKey" value="SampleApp2" />
+	<property name="sonar.projectName" value="SampleApp2" />
+	<property name="sonar.projectVersion" value="1.0" />
+	<property name="sonar.login" value="1fbcb423c0992560e57c82a66963d9a0812deb8c" />
+	<property name="sonar.sources" value="." />
+	<property name="sonar.java.binaries" value="build" />
+	<property name="sonar.java.libraries" value="sonarqube/*.jar" />
+	<target name="sonar">
+	    <taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml">
+	        <!-- Update the following line, or put the "sonarqube-ant-task-*.jar" file in your "$HOME/.ant/lib" folder -->
+	        <classpath path="${basedir}/sonarqube/sonarqube-ant-task-2.7.1.1951.jar" />
+	    </taskdef>
+	 
+	    <!-- Execute SonarScanner for Ant Analysis -->
+	    <sonar:sonar />
+	</target>
     <target name="init">
         <mkdir dir="${buildDir}"/>  
     	<mkdir dir="${classdir}"/>
