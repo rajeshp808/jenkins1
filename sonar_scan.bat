@@ -7,5 +7,5 @@ rem java -version
 
 ant sonar
 
-set /p DUMMY=Hit ENTER to continue...
+rem set /p DUMMY=Hit ENTER to continue...
 
