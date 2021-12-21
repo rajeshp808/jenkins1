@@ -21,7 +21,7 @@
 	<property name="sonar.projectName" value="SampleApp" />
 	<property name="sonar.projectVersion" value="1.0" />
 	<property name="sonar.login" value="1fbcb423c0992560e57c82a66963d9a0812deb8c" />
-	<property name="sonar.sources" value="." />
+	<property name="sonar.sources" value="${basedir}" />
 	<property name="sonar.java.binaries" value="build" />
 	<property name="sonar.java.libraries" value="sonarqube/*.jar" />
 	<target name="sonar">
