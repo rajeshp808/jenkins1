@@ -19,7 +19,7 @@
 	<!-- Define the SonarQube project properties -->
 	<property name="sonar.projectKey" value="SampleWebApp1" />
 	<property name="sonar.projectName" value="SampleWebApp1" />
-	<property name="sonar.projectVersion" value="1.0" />
+	<property name="sonar.projectVersion" value="1.1" />
 	<property name="sonar.login" value="1fbcb423c0992560e57c82a66963d9a0812deb8c" />
 	<property name="sonar.sources" value="${basedir}" />
 	<property name="sonar.java.libraries" value="sonarqube/*.jar" />
