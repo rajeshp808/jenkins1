@@ -5,7 +5,7 @@
 <title>Jenkins Orchestration</title>
 </head>
 <body>
-<P> It works  with Sonar ?</P>
+<P> It works  with Sonar 1111</P>
 <% 
 int iSum=Start.Add(50,20);
 System.out.println("Sum ="+iSum);
@@ -13,11 +13,6 @@ System.out.println("Sum ="+iSum);
 %>
 <form>
 <table>
-<caption>Sample Input table</caption>
-<tr>
-	<th scope="col">Name</th>
-    <th scope="col">Value</th>  
-</tr>
 <tr>
 	<td>Value From Java</td>
 	<td><input type="text" name="From Java" value="<%=iSum%>" readonly></td>
