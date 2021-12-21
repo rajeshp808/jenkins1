@@ -7,7 +7,7 @@
 <body>
 <P> It works  with Sonar 1111</P>
 <% 
-int iSum=Start.Add(50,20);
+int iSum=Start.Add(100,20);
 System.out.println("Sum ="+iSum);
 
 %>
