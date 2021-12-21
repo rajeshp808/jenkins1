@@ -6,7 +6,7 @@
 <body>
 <P> It works </P>
 <% 
-int iSum=Start.Add(20,20);
+int iSum=Start.Add(100,20);
 System.out.println("Sum ="+iSum);
 
 %>
