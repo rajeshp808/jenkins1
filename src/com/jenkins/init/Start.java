@@ -7,8 +7,8 @@ public class Start {
 		int x=0;
 		
 		int y=5/2;
-		int z=10/x;
-		
+		//int z=10/x;
+		int z=10;
 		
 		System.out.println(" Value of Y "+y+" and z is "+z);
 	}
