@@ -9,6 +9,8 @@ public class Start {
 		int z=10/y;
 		
 		System.out.println(" Value of Y "+y+" and z is "+z);
+		String strProject="Hello";
+		
 	}
 	
 	public static int Add(int x,int y){
