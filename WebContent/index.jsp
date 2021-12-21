@@ -4,9 +4,9 @@
 <title>Jenkins Orchestration</title>
 </head>
 <body>
-<P> It works </P>
+<P> It works  with Sonar ?</P>
 <% 
-int iSum=Start.Add(100,20);
+int iSum=Start.Add(50,20);
 System.out.println("Sum ="+iSum);
 
 %>
