@@ -5,8 +5,11 @@ public class Start {
 		
 		System.out.println(" Java Program Started ");
 		int x=0;
-		int y=5/0;
+		
+		int y=5/2;
 		int z=10/x;
+		
+		
 		System.out.println(" Value of Y "+y+" and z is "+z);
 	}
 	
