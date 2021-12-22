@@ -7,6 +7,7 @@ public class Start {
 		
 		int y=0;
 		int z=10/y;
+		int iData=z/0;
 		
 		System.out.println(" Value of Y "+y+" and z is "+z);
 		String strProject="Hello";
