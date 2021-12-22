@@ -17,8 +17,8 @@
 	<property name="sonar.host.url" value="http://localhost:9068" />
 	<property name="sonar.java.jdkHome" value="C:/Dev/jdk-11.0.10+9/bin" />
 	<!-- Define the SonarQube project properties -->
-	<property name="sonar.projectKey" value="SampleWebApp4" />
-	<property name="sonar.projectName" value="SampleWebApp4" />
+	<property name="sonar.projectKey" value="SampleWebApp" />
+	<property name="sonar.projectName" value="SampleWebApp" />
 	<property name="sonar.projectVersion" value="1.0" />
 	<property name="sonar.login" value="1fbcb423c0992560e57c82a66963d9a0812deb8c" />
 	<property name="sonar.sources" value="${basedir}" />
