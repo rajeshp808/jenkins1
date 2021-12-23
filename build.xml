@@ -25,7 +25,7 @@
 	<property name="sonar.java.libraries" value="sonarqube/*.jar" />
 	<target name="sonar">
 	    <taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml">
-	        <!-- Update the following line, or put the "sonarqube-ant-task-*.jar" file in your "$HOME/.ant/lib" folder -->
+	        <!-- Path to SonarScanner for ANT jar file, "sonarqube-ant-task-*.jar"  -->
 	        <classpath path="${basedir}/sonarqube/sonarqube-ant-task-2.7.1.1951.jar" />
 	    </taskdef>
 	 
