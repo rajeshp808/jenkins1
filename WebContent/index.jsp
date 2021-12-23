@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Jenkins Orchestration</title>
+<title>DevOps Orchestration</title>
 </head>
 <body>
 <P> It works  with Sonar 0000</P>
