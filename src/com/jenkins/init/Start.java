@@ -6,7 +6,7 @@ public class Start {
 		System.out.println(" Java Program Started ");
 		
 		int y=0;
-		int z=10/2;
+		int z=10/0;
 		
 		System.out.println(" Value of Y "+y+" and z is "+z);
 		String strProject="Hello";
